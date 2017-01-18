@@ -1,1 +1,7 @@
 C:\Users\john\c-exercises\m1-w1d2-variables-and-datatypes-exercises\VariableNaming\bin\Debug\VariableNaming.exe.config
+C:\Users\naden\workspaces\najmaaden-c-exercises\m1-w1d2-variables-and-datatypes-exercises\VariableNaming\bin\Debug\VariableNaming.exe.config
+C:\Users\naden\workspaces\najmaaden-c-exercises\m1-w1d2-variables-and-datatypes-exercises\VariableNaming\bin\Debug\VariableNaming.exe
+C:\Users\naden\workspaces\najmaaden-c-exercises\m1-w1d2-variables-and-datatypes-exercises\VariableNaming\bin\Debug\VariableNaming.pdb
+C:\Users\naden\workspaces\najmaaden-c-exercises\m1-w1d2-variables-and-datatypes-exercises\VariableNaming\obj\Debug\VariableNaming.csprojResolveAssemblyReference.cache
+C:\Users\naden\workspaces\najmaaden-c-exercises\m1-w1d2-variables-and-datatypes-exercises\VariableNaming\obj\Debug\VariableNaming.exe
+C:\Users\naden\workspaces\najmaaden-c-exercises\m1-w1d2-variables-and-datatypes-exercises\VariableNaming\obj\Debug\VariableNaming.pdb
