@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,25 @@ namespace Exercises
          */
         public int LoneSum(int a, int b, int c)
         {
-            return 0;
+            int sum = a + b + c;
+           
+            if ((a == b) && (b == c))
+            {
+                sum = 0;
+            }
+            else if (a == b)
+            {
+                sum = sum - (a + b);
+            }
+            else if (b == c)
+            {
+                sum = sum - (b + c);
+            }
+            else if (a == c)
+            {
+                sum = sum - (a + c);
+            }
+            return sum;
         }
 
     }
