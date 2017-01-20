@@ -25,6 +25,35 @@ namespace DecimalToBinary
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Please enter decimal values, separated by space or comma ");
+            string input = Console.ReadLine();
+            char[] separator = { ' ', ',' };
+            string[] splitValues = input.Split(separator);
+            // numbers array
+
+            for (int i = 0; i < splitValues.Length; i++)
+            {
+                
+                int inputValue = int.Parse(splitValues[i]);
+                Console.Write("Decimal Value:  " + inputValue);
+
+                //convert from int to binary
+                int remainder;
+                string result = string.Empty;
+                while (inputValue > 0)
+                {
+                    remainder = inputValue % 2;
+                    inputValue = inputValue / 2;
+                    result = remainder.ToString() + result; 
+
+                }
+                Console.WriteLine("  " +"Binary:  {0}", result);
+
+            }
+
+
+
+
         }
     }
 }
