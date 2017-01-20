@@ -18,7 +18,33 @@ namespace Exercises
          */
         public int LuckySum(int a, int b, int c)
         {
-            return 0;
+            int sum = 0;
+            if (!(a == 13))
+            {
+                sum += a;
+            } else
+            {
+                sum += 0;
+                return sum;
+            }
+            if (!(b == 13))
+            {
+                sum += b;
+            } else
+            {
+                sum += 0;
+                return sum;
+            }
+            if (!(c == 13))
+            {
+                sum += c;
+            }
+            else
+            {
+                sum += 0;
+                return sum;
+            }
+            return sum;
         }
     }
 }
