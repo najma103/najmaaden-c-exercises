@@ -22,6 +22,22 @@ namespace Fibonacci
          */
         static void Main(string[] args)
         {
+            Console.WriteLine("Please enter the Fibonacci number: ");
+            int fibonacciNumber = int.Parse(Console.ReadLine());
+            int prev = 0;
+            int next = 1;
+            int sum = 0;
+            Console.Write("0, 1, ");
+            for (int i = 0; i < fibonacciNumber; )
+            {
+                sum = prev + next;
+                prev = next;
+                next = sum;
+                Console.Write("{0}" + ", ", sum);
+                i = i + prev;
+
+            }
+
         }
     }
 }
