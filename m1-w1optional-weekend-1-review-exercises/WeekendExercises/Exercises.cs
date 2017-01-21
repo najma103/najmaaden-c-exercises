@@ -16,7 +16,15 @@ namespace WeekendExercises
 	 */
         public int ArrayCount9(int[] nums)
         {
-            return 0;
+            int countNine = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 9)
+                {
+                    countNine += 1;
+                }
+            }
+            return countNine;
         }
 
         /*
@@ -27,7 +35,24 @@ namespace WeekendExercises
          */
         public bool ArrayFront9(int[] nums)
         {
+            int arraySize = 0;
+
+            if (nums.Length > 4)
+            {
+                arraySize = 4;
+            } else
+            {
+                arraySize = nums.Length;
+            }
+            for (int i = 0; i < arraySize; i++)
+            {
+                if (nums[i] == 9)
+                {
+                    return true;
+                } 
+            }
             return false;
+
         }
 
         /*
@@ -62,7 +87,26 @@ namespace WeekendExercises
          */
         public int[] MakeEnds(int[] nums)
         {
-            return new int[] { };
+            int lastIndex = nums.Length - 1;
+            int[] tempArray = new int[2];
+            if (nums.Length > 2)
+            {
+                tempArray[0] = nums[0];
+                tempArray[1] = nums[lastIndex];
+                return tempArray;
+            }
+            else if (nums.Length == 1)
+            {
+                tempArray[0] = nums[0];
+                tempArray[1] = nums[0];
+
+                return tempArray;
+            }
+            else
+            {
+                return nums;
+            }
+
         }
 
         /*
@@ -73,6 +117,13 @@ namespace WeekendExercises
          */
         public bool Has23(int[] nums)
         {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 2 || nums[i] == 3)
+                {
+                    return true;
+                }
+            }
             return false;
         }
 
@@ -84,7 +135,14 @@ namespace WeekendExercises
          */
         public bool No23(int[] nums)
         {
-            return false;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 2 || nums[i] == 3)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         /*
