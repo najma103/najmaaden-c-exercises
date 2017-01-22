@@ -1,0 +1,8 @@
+/Users/najmaaden/home/najmaaden-c-exercises/m1-w1optional-weekend-1-review-exercises/WeekendExercises/obj/Debug/.NETFramework,Version=v4.5.2.AssemblyAttribute.cs
+/Users/najmaaden/home/najmaaden-c-exercises/m1-w1optional-weekend-1-review-exercises/WeekendExercises/bin/Debug/WeekendExercises.dll.config
+/Users/najmaaden/home/najmaaden-c-exercises/m1-w1optional-weekend-1-review-exercises/WeekendExercises/bin/Debug/WeekendExercises.dll.mdb
+/Users/najmaaden/home/najmaaden-c-exercises/m1-w1optional-weekend-1-review-exercises/WeekendExercises/bin/Debug/WeekendExercises.dll
+/Users/najmaaden/home/najmaaden-c-exercises/m1-w1optional-weekend-1-review-exercises/WeekendExercises/obj/Debug/WeekendExercises.dll
+/Users/najmaaden/home/najmaaden-c-exercises/m1-w1optional-weekend-1-review-exercises/WeekendExercises/obj/Debug/WeekendExercises.dll.mdb
+/Users/najmaaden/home/najmaaden-c-exercises/m1-w1optional-weekend-1-review-exercises/WeekendExercises/bin/Debug/EntityFramework.dll
+/Users/najmaaden/home/najmaaden-c-exercises/m1-w1optional-weekend-1-review-exercises/WeekendExercises/bin/Debug/EntityFramework.SqlServer.dll
