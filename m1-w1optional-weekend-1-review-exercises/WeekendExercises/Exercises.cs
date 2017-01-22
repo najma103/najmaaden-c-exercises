@@ -155,7 +155,19 @@ namespace WeekendExercises
          */
         public int[] MakeLast(int[] nums)
         {
-            return new int[] { };
+            int arraySize = nums.Length;
+            int[] tempArray = new int[arraySize * 2];
+            int lastIndex = tempArray.Length - 1;
+
+            if (arraySize > 0)
+            {
+                tempArray[lastIndex] = nums[arraySize - 1];
+                return tempArray;
+            }
+            else
+            {
+                return nums;
+            }
         }
 
         /*
