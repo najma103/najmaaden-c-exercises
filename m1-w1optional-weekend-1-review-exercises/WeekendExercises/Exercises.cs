@@ -201,7 +201,19 @@ namespace WeekendExercises
          */
         public int[] BiggerTwo(int[] a, int[] b)
         {
-            return new int[] { };
+            int sumA = 0;
+            int sumB = 0;
+
+            sumA = a[0] + a[1];
+            sumB = b[0] + b[1];
+
+            if (sumA >= sumB)
+            {
+                return a;
+            } else
+            {
+                return b;
+            }
         }
 
         /*
@@ -272,7 +284,22 @@ namespace WeekendExercises
          */
         public bool Only14(int[] nums)
         {
-            return false;
+            bool hasOneFour = true;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 1 || nums[i] == 4)
+                {
+                    hasOneFour = true;
+                }
+                else 
+                {
+                    hasOneFour = false;
+                    return false;
+                }
+            }
+            return hasOneFour;
+
         }
 
         /*
