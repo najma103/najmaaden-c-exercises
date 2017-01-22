@@ -201,7 +201,7 @@ namespace WeekendExercises
          */
         public int[] BiggerTwo(int[] a, int[] b)
         {
-<<<<<<< HEAD
+
             int sumA = 0;
             int sumB = 0;
 
@@ -215,23 +215,7 @@ namespace WeekendExercises
             {
                 return b;
             }
-=======
-			int sumA = 0;
-			int sumB = 0;
 
-			sumA = a[0] + a[1];
-			sumB = b[0] + b[1];
-
-			if (sumA >= sumB)
-			{
-				return a;
-			}
-			else 
-			{
-				return b;
-			}
-
->>>>>>> d2a2d01362bf9a67c41dc7056820a74dd55d379e
         }
 
         /*
