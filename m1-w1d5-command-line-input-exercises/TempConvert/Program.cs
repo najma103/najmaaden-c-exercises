@@ -27,8 +27,39 @@ namespace TempConvert
          */
         static void Main(string[] args)
         {
+            Console.WriteLine("Please enter the temperature: ");
+            string strTemp = Console.ReadLine();
+            double temp;
+            bool parsed = double.TryParse(strTemp, out temp);
 
+            Console.WriteLine("Is the temperature in (C)elcius, or (F)arenheit? ");
+            string metric = Console.ReadLine();
 
+            int celcius, farenheit;
+            if (parsed)
+            {
+                if (metric == "f" || metric == "F")
+                {
+                    celcius = (int)((temp - 32) / 1.8);
+                    Console.WriteLine(temp + "F  is "
+                            + celcius + "C.");
+                }
+                else if (metric == "c" || metric == "C")
+                {
+                    farenheit = (int)((temp * 1.8) + 32);
+                    Console.WriteLine(temp + "C  is "
+                            + farenheit + "F.");
+                }
+                else
+                {
+                    Console.WriteLine("Program does not recognize this character: "
+                                        + metric);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Program could not parse '{0}' to an int. ", strTemp);
+            }
 
         }
     }

@@ -26,6 +26,39 @@ namespace LinearConvert
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Please enter the length: ");
+            string strLenght = Console.ReadLine();
+            int lenght;
+            bool parsed = Int32.TryParse(strLenght, out lenght);
+            
+            Console.WriteLine("Is the measurement in (m)eter, or (f)eet? f or m?");
+            string metric = Console.ReadLine();
+           
+            double meter, feet;
+            if (parsed)
+            {
+                if (metric == "f" || metric == "F")
+                {
+                    meter =  (int)(lenght * 0.3048);
+                    Console.WriteLine(lenght + "f  is "
+                            + meter + "m.");
+                }
+                else if (metric == "m" || metric == "M")
+                {
+                    feet = (int)(lenght * 3.2808399);
+                    Console.WriteLine(lenght + "m  is "
+                            + feet + "f.");
+                }
+                else
+                {
+                    Console.WriteLine("Program does not recognize this character: " 
+                                        + metric);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Program could not parse '{0}' to an int. ", strLenght);
+            }
 
         }
     }
