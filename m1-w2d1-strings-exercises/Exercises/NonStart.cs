@@ -17,7 +17,14 @@ namespace Exercises
          */
         public string NonStart(string a, string b)
         {
-            return null;
+            if (a.Length >= 1 && b.Length >= 1)
+            {
+                return a.Substring(1) + b.Substring(1);
+            }
+            else
+            {
+                return a + b;
+            }
         }
     }
 }

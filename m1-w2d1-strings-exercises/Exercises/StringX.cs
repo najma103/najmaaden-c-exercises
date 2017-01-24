@@ -17,7 +17,20 @@ namespace Exercises
         */
         public string StringX(string str)
         {
-            return null;
+            if (str.Length > 2)
+            {
+                string newStr = str.Substring(1, (str.Length - 2));
+                newStr = newStr.Replace("x", "");
+                string strFirst = str.Substring(0, 1);
+                string strLast = str.Substring((str.Length - 1), 1);
+
+                return strFirst + newStr + strLast;
+            } else
+            {
+                return str;
+            }
+
+     
         }
     }
 }

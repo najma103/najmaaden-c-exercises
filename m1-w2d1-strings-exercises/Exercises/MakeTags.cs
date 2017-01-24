@@ -18,7 +18,13 @@ namespace Exercises
         */
         public string MakeTags(string tag, string word)
         {
-            return null;
+            string startTag = "<>";
+            string endTag = "</>";
+            startTag = startTag.Insert(1, tag);
+            endTag = endTag.Insert(2, tag);
+            // concatinate all 
+            string newStr = startTag + word + endTag;
+            return newStr;
         }
     }
 }

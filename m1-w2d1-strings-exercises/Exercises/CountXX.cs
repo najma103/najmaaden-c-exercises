@@ -16,7 +16,46 @@ namespace Exercises
          */
         public int CountXX(string str)
         {
-            return 0;
+            int countX = 0;
+            int lastIndex = str.Length - 1;
+            bool hasThreeX = false;
+
+            string[] words = str.Split(' ');
+
+                for (int i = 0; i < str.Length; i++)
+                {
+                    if (str[i] == 'x')
+                    {
+                        countX += 1;
+                    }
+                }
+                if(words.Length == 1)
+                {
+                    if (countX == 2)
+                    {
+                        return 1;
+                    }
+                    if (countX > 2)
+                    {
+                        return countX - 1;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                 }
+                 else
+                 {
+                    if (countX > 2)
+                    {
+                        return countX - 2;
+                    }
+                    else
+                    {
+                     return 0;
+                    }
+                 }
+  
         }
     }
 }

@@ -17,7 +17,20 @@ namespace Exercises
          */
         public string WithouEnd2(string str)
         {
-            return null;
+            string newStr = "";
+
+            int lastIndex = str.Length - 2;
+
+            if (str.Length > 2)
+            {
+                newStr = str.Substring(1, lastIndex);
+                return newStr;
+
+            } else
+            {
+                return newStr;
+            }
+
         }
     }
 }

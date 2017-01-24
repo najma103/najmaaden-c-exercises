@@ -17,7 +17,17 @@ namespace Exercises
          */
         public string MiddleTwo(string str)
         {
-            return null;
+            int startIndex = ((str.Length - 1) / 2);
+            string newStr;
+            if (str.Length >= 4)
+            {
+                newStr = str.Substring(startIndex, 2);
+            }
+            else
+            {
+                newStr = str;
+            }
+            return newStr;
         }
     }
 }
