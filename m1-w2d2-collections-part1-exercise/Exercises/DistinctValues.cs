@@ -16,8 +16,15 @@ namespace Exercises
          */
         public List<string> DistinctValues(List<string> stringList)
         {
+            HashSet<string> colorHash = new HashSet<string>();
 
-            return null;
+            foreach (string item in stringList)
+            {
+                colorHash.Add(item);
+            }
+            List<string> colorList = colorHash.ToList();
+
+            return colorList;
         }
     }
 }

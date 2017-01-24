@@ -18,7 +18,19 @@ namespace Exercises
          */
         public List<string> ReverseList(List<string> objectList)
         {
-            return null;
+            Stack <string> newStr = new Stack<string>();
+            List<string> listString = new List<string>();
+            foreach (string element in objectList)
+            {
+                newStr.Push(element);
+            }
+            for (int i= 0; i < objectList.Count; i++)
+            {
+                listString.Add(newStr.Pop());
+            }
+
+            return listString;
+           
         }
 
     }

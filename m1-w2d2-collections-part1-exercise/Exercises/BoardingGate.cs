@@ -20,6 +20,14 @@ namespace Exercises
          */
         public List<int> BoardingGate(List<int> seatNumberList)
         {
+            Queue<int> boardingSeat = new Queue<int>();
+            foreach (int element in seatNumberList)
+            {
+                if (element > 1 || element <=30)
+                {
+                    boardingSeat.Enqueue(element);
+                }
+            }
             return null;
         }
     }
