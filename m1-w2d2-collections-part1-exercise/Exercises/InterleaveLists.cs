@@ -32,27 +32,30 @@ namespace Exercises
             {
                 if (listOne.Count > listTwo.Count)
                 {
+                    int lastIndex = listTwo.Count;
                     for (int i = 0; i < listTwo.Count; i++)
                     {
                         newIntList.Add(listOne[i]);
                         newIntList.Add(listTwo[i]);
                     }
-                    
-
-
+                    for (int i = lastIndex; i < listOne.Count; i++)
+                    {
+                        newIntList.Add(listOne[i]);
+                    }
+ 
                 } else
                 {
+                    int lastIndex = listOne.Count;
                     for (int i = 0; i < listOne.Count; i++)
                     {
                         newIntList.Add(listOne[i]);
                         newIntList.Add(listTwo[i]);
+       
                     }
-                    //int rem = listTwo.Count - listOne.Count;
-                    //for (int i = rem; i <= rem; i--)
-                    //{
-                    //    newIntList.Add(listOne[i]);
-                    //    newIntList.Add(listTwo[i]);
-                    //}
+                    for (int i = lastIndex; i < listTwo.Count; i++)
+                    {
+                        newIntList.Add(listTwo[i]);
+                    }
                 }
             }
 
