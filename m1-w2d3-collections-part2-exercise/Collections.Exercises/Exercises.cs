@@ -184,10 +184,9 @@ namespace Collections.ExerciseProblems
             {
                 string key = element.Substring(0, 1);
                 string value = element.Substring(element.Length - 1);
-                if (!(wordBeginAndEnd.ContainsKey(key)))
-                {
-                    wordBeginAndEnd[key] = value;
-                }
+            
+                wordBeginAndEnd[key] = value;
+        
             }
 
             return wordBeginAndEnd;

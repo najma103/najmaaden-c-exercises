@@ -121,7 +121,7 @@ namespace Collections.Tests
                 { "m", "t" },
                 { "n", "t" }
             };
-            actual = exercises.BeginningAndEnding(new string[] {  "good", "moat", "good", "night" });
+            actual = exercises.BeginningAndEnding(new string[] { "muddy",  "good", "moat", "good", "night" });
             AssertCollections(expected, actual);
         }
 
