@@ -328,7 +328,7 @@ namespace Collections.ExerciseProblems
          */
 
         //helper method
-        public int Last2(string str)
+        private int Last2(string str)
         {
             int count = 0;
             for (int i = 0; i < str.Length - 2; i++)
