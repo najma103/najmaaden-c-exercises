@@ -42,7 +42,29 @@ namespace Collections.ExerciseProblems
          */
         public string AnimalGroupName(string animalName)
         {
-            return null;
+            Dictionary<string, string> dictionary = 
+                                new Dictionary<string, string>();
+            dictionary["rhino"] = "Crash";
+            dictionary["giraffe"] = "Tower";
+            dictionary["elephant"] = "Herd";
+            dictionary["lion"] = "Pride";
+            dictionary["crow"] = "Murder";
+            dictionary["pigeon"] = "Kit";
+            dictionary["flamingo"] = "Pat";
+            dictionary["deer"] = "Herd";
+            dictionary["dog"] = "Pack";
+            dictionary["crocodile"] = "Float";
+
+
+            if (dictionary.ContainsKey((animalName.ToLower())))
+            {
+                return dictionary[animalName.ToLower()];
+            }
+            else
+            {
+                return "unknown";
+            }
+
         }
 
         /*
@@ -69,7 +91,24 @@ namespace Collections.ExerciseProblems
          */
         public double IsItOnSale(string itemNumber)
         {
-            return 0.00;
+            Dictionary<string, double> saleDictionary
+                                 = new Dictionary<string, double>();
+            saleDictionary["KITCHEN4001"] = 0.20;
+            saleDictionary["GARAGE1070"]  = 0.15;
+            saleDictionary["LIVINGROOM"]  = 0.10;
+            saleDictionary["KITCHEN6073"] = 0.40;
+            saleDictionary["BEDROOM3434"] = 0.60;
+            saleDictionary["BATH0073"]    = 0.15;
+
+            //if key is in the dictionary, return value
+            if (saleDictionary.ContainsKey(itemNumber.ToUpper()))
+            {
+                return saleDictionary[itemNumber.ToUpper()];
+            } else
+            {
+                return 0.00;
+            }
+            
         }
 
         /*
@@ -84,7 +123,18 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<string, int> RobPeterToPayPaul(Dictionary<string, int> peterPaul)
         {
-            return null;
+            bool containsPeter = peterPaul.ContainsKey("Peter");
+            bool containsPaul = peterPaul.ContainsKey("Paul");
+            if (containsPeter && containsPaul)
+            {
+                if (peterPaul["Peter"] > 0 && peterPaul["Paul"] <= 1000)
+                {
+                    peterPaul["Paul"] += peterPaul["Peter"] / 2;
+                    peterPaul["Peter"] = peterPaul["Peter"] / 2;
+
+                }
+            }
+            return peterPaul;
         }
 
         /*
@@ -98,7 +148,22 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<string, int> PeterPaulPartnership(Dictionary<string, int> peterPaul)
         {
-            return null;
+            bool containsPeter = peterPaul.ContainsKey("Peter");
+            bool containsPaul = peterPaul.ContainsKey("Paul");
+
+            if (containsPeter && containsPaul)
+            {
+                if (peterPaul["Peter"] >= 5000 && peterPaul["Paul"] >= 10000)
+                {
+                    peterPaul["PeterPaulPartnership"] = ((int)(peterPaul["Peter"] * 0.25))
+                                                       + ((int)(peterPaul["Paul"] * 0.25));
+
+                    peterPaul["Paul"] = (peterPaul["Paul"] - (int)(peterPaul["Paul"] * 0.25));
+                    peterPaul["Peter"] = (peterPaul["Peter"] - (int)(peterPaul["Peter"] * 0.25));
+
+                }
+            }
+            return peterPaul;
         }
 
         /*
@@ -128,7 +193,21 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<string, int> WordCount(string[] words)
         {
-            return null;
+            Dictionary<string, int> WordCountDictionary =
+                                        new Dictionary<string, int>();
+            foreach (string word in words)
+            {
+                if (WordCountDictionary.ContainsKey(word))
+                {
+                    WordCountDictionary[word] = WordCountDictionary[word] + 1;
+                }
+                else
+                {
+                    WordCountDictionary[word] = 1;
+                }
+            }
+
+            return WordCountDictionary;
         }
 
         /*
@@ -144,7 +223,21 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<int, int> IntCount(int[] ints)
         {
-            return null;
+            Dictionary<int, int> intCountDictionary =
+                            new Dictionary<int, int>();
+            foreach (int element in ints)
+            {
+                if (intCountDictionary.ContainsKey(element))
+                {
+                    intCountDictionary[element] = intCountDictionary[element] + 1;
+                }
+                else
+                {
+                    intCountDictionary[element] = 1;
+                }
+            }
+
+            return intCountDictionary;
         }
 
         /*
