@@ -28,7 +28,8 @@ namespace Exercises
                 if (str.Contains("bad"))
                 {
                     return true;
-                } else
+                }
+                else
                 {
                     return false;
                 }

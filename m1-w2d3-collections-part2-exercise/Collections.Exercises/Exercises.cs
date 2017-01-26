@@ -91,8 +91,8 @@ namespace Collections.ExerciseProblems
          */
         public double IsItOnSale(string itemNumber)
         {
-            Dictionary<string, double> saleDictionary
-                                 = new Dictionary<string, double>();
+            Dictionary<string, double> saleDictionary = new Dictionary<string, 
+                                    double>(StringComparer.OrdinalIgnoreCase);
             saleDictionary["KITCHEN4001"] = 0.20;
             saleDictionary["GARAGE1070"]  = 0.15;
             saleDictionary["LIVINGROOM"]  = 0.10;
@@ -101,10 +101,11 @@ namespace Collections.ExerciseProblems
             saleDictionary["BATH0073"]    = 0.15;
 
             //if key is in the dictionary, return value
-            if (saleDictionary.ContainsKey(itemNumber.ToUpper()))
+            if (saleDictionary.ContainsKey(itemNumber))
             {
-                return saleDictionary[itemNumber.ToUpper()];
-            } else
+                return saleDictionary[itemNumber];
+            }
+            else
             {
                 return 0.00;
             }
@@ -176,7 +177,20 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<string, string> BeginningAndEnding(string[] words)
         {
-            return null;
+            Dictionary<string, string> wordBeginAndEnd = 
+                new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+
+            foreach (string element in words)
+            {
+                string key = element.Substring(0, 1);
+                string value = element.Substring(element.Length - 1);
+                if (!(wordBeginAndEnd.ContainsKey(key)))
+                {
+                    wordBeginAndEnd[key] = value;
+                }
+            }
+
+            return wordBeginAndEnd;
         }
 
         /*
@@ -251,7 +265,21 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<string, bool> WordMultiple(string[] words)
         {
-            return null;
+            Dictionary<string, int> multipleWords
+                            = new Dictionary<string, int>(WordCount(words));
+            Dictionary<string, bool> newMultipleWords =
+                                        new Dictionary<string, bool>();
+            foreach (KeyValuePair<string, int> kvp in multipleWords)
+            {
+                if (kvp.Value >= 2)
+                {
+                    newMultipleWords[kvp.Key] = true;
+                } else
+                {
+                    newMultipleWords[kvp.Key] = false;
+                }
+            }
+            return newMultipleWords;
         }
 
         /*
@@ -267,7 +295,20 @@ namespace Collections.ExerciseProblems
         public Dictionary<string, int> ConsolidateInventory(Dictionary<string, int> mainWarehouse, 
             Dictionary<string, int> remoteWarehouse)
         {
-            return null;
+            foreach (string key in remoteWarehouse.Keys)
+            {
+                if (mainWarehouse.ContainsKey(key))
+                {
+                    mainWarehouse[key] += remoteWarehouse[key];
+                }
+                else
+                {
+                    mainWarehouse.Add(key, remoteWarehouse[key]);
+                }
+                
+            }
+
+            return mainWarehouse;
         }
 
         /*
@@ -285,9 +326,31 @@ namespace Collections.ExerciseProblems
          * last2Revisited(["hixxhi", "xaxxaxaxx", "axxxaaxx"]) → {"hixxhi": 1, "xaxxaxaxx": 1, "axxxaaxx": 2}
          * 
          */
+
+        //helper method
+        public int Last2(string str)
+        {
+            int count = 0;
+            for (int i = 0; i < str.Length - 2; i++)
+            {
+                if (str.Substring(i, 2) == (str.Substring(str.Length - 2)))
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
         public Dictionary<string, int> Last2Revisted(string[] words)
         {
-            return null;
+            Dictionary<string, int> last2Dictionary = 
+                                            new Dictionary<string, int>();
+            foreach (string word in words)
+            {
+                last2Dictionary[word] = Last2(word);
+            }
+
+
+            return last2Dictionary;
         }
 
     }
