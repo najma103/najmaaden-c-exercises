@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechElevator.Classes;
 
 
 namespace PersonExercise
@@ -43,6 +44,12 @@ namespace PersonExercise
             // Does FullName and Adult return the correct value based on the other properties?
 
             // Try instantiating another person object and doing the same as above with it
+
+            Person najma = new Person();
+            najma.FirstName = "najmaa";
+
+            Console.WriteLine("First Name: " + najma.FirstName);
+
         }
     }
 }
