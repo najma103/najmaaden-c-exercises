@@ -11,7 +11,9 @@ namespace ShoppingCartExercise
     {
         static void Main(string[] args)
         {
-           
+            ShoppingCart sc = new ShoppingCart();
+
+
         }
     }
 }
