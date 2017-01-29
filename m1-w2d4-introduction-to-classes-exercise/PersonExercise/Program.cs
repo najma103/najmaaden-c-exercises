@@ -45,10 +45,14 @@ namespace PersonExercise
 
             // Try instantiating another person object and doing the same as above with it
 
-            Person najma = new Person();
-            najma.FirstName = "najmaa";
+            Person newPerson = new Person();
+            newPerson.FirstName = "najmaa";
+            newPerson.lastName = "Aden";
+            newPerson.age = 30;
 
-            Console.WriteLine("First Name: " + najma.FirstName);
+            Console.WriteLine("First Name: " + newPerson.FirstName);
+            string name = newPerson.GetFullName();
+            Console.WriteLine(name + " is " + newPerson.age);
 
         }
     }
