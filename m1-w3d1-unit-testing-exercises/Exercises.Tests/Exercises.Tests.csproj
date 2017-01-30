@@ -58,6 +58,8 @@
     <Compile Include="Lucky13Test.cs" />
     <Compile Include="AnimalGroupTest.cs" />
     <Compile Include="CigarPartyTest.cs" />
+    <Compile Include="NonStartTest.cs" />
+    <Compile Include="StringBitsTest.cs" />
     <Compile Include="WordCountTest.cs" />
   </ItemGroup>
   <ItemGroup>
