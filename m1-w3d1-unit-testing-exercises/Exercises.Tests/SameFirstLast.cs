@@ -9,7 +9,7 @@ namespace Exercises.Tests
     {
         SameFirstLast firstLast = new SameFirstLast();
         [TestMethod]
-        public void TestMethod1()
+        public void TestFirstLast()
         {
             //IsItTheSame([1, 2, 3]) → false
             //IsItTheSame([1, 2, 3, 1]) → true
