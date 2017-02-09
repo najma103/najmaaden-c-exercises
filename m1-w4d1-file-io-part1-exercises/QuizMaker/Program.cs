@@ -24,7 +24,7 @@ namespace QuizMaker
               
                     if (item[i].Contains("*"))
                     {
-                        correctAnswer = item[i].Substring(0, item.Length - 1);
+                        correctAnswer = item[i].Substring(0, item[i].Length - 1);
                         Console.WriteLine(i + ". " + correctAnswer);
                     } else
                     {
@@ -37,7 +37,8 @@ namespace QuizMaker
                 if (userAnswer == correctAnswer)
                 {
                     Console.WriteLine("You are correct ");
-                } else
+                }
+                else
                 {
                     Console.WriteLine("Sorry Better luck next time");
                 }
