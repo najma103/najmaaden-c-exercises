@@ -119,6 +119,10 @@
 -- 17. The average population of cities in each country (hint: use city.countrycode)
 -- ordered from highest to lowest.
 -- (highest avg population: 4017733.0000, "SGP")
+	SELECT countrycode, AVG(population) AS AVG_Population
+	FROM city
+	GROUP BY countrycode
+	ORDER BY AVG(population) DESC;
 	
 -- 18. The count of cities in each state in the USA, ordered by state name.
 -- (45 rows)
