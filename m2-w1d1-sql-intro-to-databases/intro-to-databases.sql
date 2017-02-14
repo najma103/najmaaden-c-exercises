@@ -111,7 +111,7 @@
 	WHERE continent = 'Europe';
 
 -- 22. The number of years since independence for all countries that have a year of independence (192 rows)
-	SELECT 2017 - indepyear
+	SELECT 2017 - indepyear AS SinceIndepence
 	FROM country
 	WHERE indepyear IS NOT NULL;
 
