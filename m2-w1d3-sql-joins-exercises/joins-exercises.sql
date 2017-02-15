@@ -2,33 +2,82 @@
 
 -- 1. All of the films that Nick Stallone has appeared in
 --    Rows: 30
+		select f.title from film AS f
+		JOIN film_actor fa on f.film_id = fa.film_id
+		JOIN actor a on a.actor_id = fa.actor_id
+		WHERE a.first_name = 'Nick' AND a.last_name = 'Stallone';
+
 
 -- 2. All of the films that Rita Reynolds has appeared in
 --    Rows: 20
+		select f.title from film AS f
+		JOIN film_actor fa on f.film_id = fa.film_id
+		JOIN actor a on a.actor_id = fa.actor_id
+		WHERE a.first_name = 'Rita' AND a.last_name = 'Reynolds';
+
 
 -- 3. All of the films that Judy Dean or River Dean have appeared in
 --    Rows: 46
 
+		select f.title from film AS f
+		JOIN film_actor fa on f.film_id = fa.film_id
+		JOIN actor a on a.actor_id = fa.actor_id
+		WHERE (a.first_name = 'Judy' OR a.first_name = 'River') and a.last_name = 'Dean';
+
 -- 4. All of the the ‘Documentary’ films
 --    Rows: 68
+		select f.title, cat.name from film f
+		join film_category fc ON fc.film_id = f.film_id
+		join category cat on fc.category_id = cat.category_id
+		where cat.name = 'Documentary';
 
 -- 5. All of the ‘Comedy’ films
 --    Rows: 58
+		select f.title, cat.name from film f
+		join film_category fc ON fc.film_id = f.film_id
+		join category cat on fc.category_id = cat.category_id
+		where cat.name = 'Comedy';
 
 -- 6. All of the ‘Children’ films that are rated ‘G’
 --    Rows: 10 
+		select f.title, cat.name from film f
+		join film_category fc ON f.film_id = fc.film_id
+		join category cat on fc.category_id = cat.category_id
+		where cat.name = 'Children' and f.rating = 'G';
 
 -- 7. All of the ‘Family’ films that are rated ‘G’ and are less than 2 hours in length
 --    Rows: 3
+		select f.title, cat.name from film f
+		join film_category fc ON f.film_id = fc.film_id
+		join category cat on fc.category_id = cat.category_id
+		where cat.name = 'Family' and f.rating = 'G' and f.length < 2;
 
 -- 8. All of the films featuring actor Matthew Leigh that are rated ‘G’
 --    Rows: 9
+		select f.title from film AS f
+		join film_actor fa on f.film_id = fa.film_id
+		join actor a on a.actor_id = fa.actor_id
+		join film_category fc ON f.film_id = fc.film_id
+		where f.rating = 'G' and a.first_name = 'Matthew' AND a.last_name = 'Leigh';
+	
 
 -- 9. All of the ‘Sci-Fi’ films released in 2006
 --    Rows: 61
 
+		select f.title Film_Title, cat.name Category, f.release_year Year from film f
+		join film_category fc ON f.film_id = fc.film_id
+		join category cat on cat.category_id = fc.category_id 
+		where cat.name = 'sci-fi' and f.release_year = 2006
+
 -- 10. All of the ‘Action’ films starring Nick Stallone
 --     Rows: 2
+		select f.title Movie, cat.name Category, a.first_name + ', ' 
+		+ a.last_name as Actor_Name  from film AS f
+		join film_actor fa on f.film_id = fa.film_id
+		join actor a on a.actor_id = fa.actor_id
+		join film_category fc ON f.film_id = fc.film_id
+		join category cat on cat.category_id = fc.category_id 
+		where cat.name = 'Action' and a.first_name = 'Nick' and a.last_name = 'Stallone';
 
 -- 11. The address of all stores, including street address, city, district, and country
 --     Rows: 2
