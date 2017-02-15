@@ -81,9 +81,17 @@
 
 -- 11. The address of all stores, including street address, city, district, and country
 --     Rows: 2
+		select store.store_id, address.address, city.city, 
+					address.district, country.country from address
+		join store on store.address_id = address.address_id
+		join city on city.city_id = address.city_id
+		join country on country.country_id = city.country_id;
 
 -- 12. A list of all stores by ID, the store’s street address, and the name of the store’s manager
 --     Rows: 2
+		select store.store_id, address.address, staff.first_name, staff.last_name from store
+		join address on address.address_id = store.address_id
+		join staff on staff.store_id = store.store_id;
 
 -- 13. The first and last name of the top ten customers ranked by number of rentals 
 --     Hint: #1 should be “ELEANOR HUNT” with 46 rentals, #10 should have 39 rentals
