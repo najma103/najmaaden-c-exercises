@@ -2,16 +2,44 @@
 @{
     Layout = null;
 }
+@{
+    int maxValue = int.Parse(Request.QueryString["maxValue"]);
+}
+
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/FizzBuzz.css" rel="stylesheet" />
     <title>FizzBuzz</title>
 </head>
 <body>
     <div> 
+        <h2>Exercise 1 - FizzBuzz</h2>
+        <ul>
+            @for (int i = 1; i < maxValue; i++)
+            {
+
+                if (i%3 == 0 && i%5 == 0)
+                {
+                    <li class="fizzbuzz"> FizzBuzz</li>
+                }
+                else if (i % 3 == 0)
+                {
+                    <li class="fizz"> Fizz</li>
+                }
+                else if (i % 5 == 0)
+                {
+                    <li class="buzz"> Buzz</li>
+                }
+                else
+                {
+                    <li>@i</li>
+                }
+            }
+        </ul>
     </div>
 </body>
 </html>
