@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="in-a-row.css" />
+    <Content Include="indexOne.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -77,6 +79,8 @@
   <ItemGroup>
     <Content Include="fun-with-blocks.css" />
     <Content Include="index.html" />
+    <Content Include="pyramids.css" />
+    <Content Include="steps.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

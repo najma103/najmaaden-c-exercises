@@ -1,0 +1,36 @@
+﻿html {
+  font: 15px Courier;
+  color: white;
+}
+.box {
+  flex-direction:row-reverse;
+  padding: 8px;
+  margin: 0px;
+  width: 25px;
+  text-align: center;
+  
+}
+.odd {
+  background-color: #ee3e64;
+  display: block;
+}
+.even {
+  background-color: #44accf;
+  display: block;
+}
+
+#box_0, #box_9 {
+    margin-left:50px;
+}
+#box_1, #box_8 {
+    margin-left: 90px;
+}
+#box_2, #box_7 {
+    margin-left: 130px;
+}
+#box_3, #box_6 {
+    margin-left: 170px;
+}
+#box_4, #box_5 {
+    margin-left: 210px;
+}

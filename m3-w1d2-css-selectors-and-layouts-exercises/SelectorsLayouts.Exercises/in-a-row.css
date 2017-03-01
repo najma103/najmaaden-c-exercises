@@ -1,18 +1,20 @@
-html {
+﻿html {
   font: 15px Courier;
   color: white;
 }
 .box {
-  padding: 5px;
-  width: 15px;
+  flex-direction:row-reverse;
+  padding: 10px;
+  margin: -5px;
+  width: 45px;
   text-align: center;
   
 }
 .odd {
   background-color: #ee3e64;
-  display: block;
+  display: inline-block;
 }
 .even {
   background-color: #44accf;
-  display: block;
+  display: inline-block;
 }
