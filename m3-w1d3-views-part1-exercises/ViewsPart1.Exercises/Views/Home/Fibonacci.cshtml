@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+@{
+    int fibonacciNumber = int.Parse(Request.QueryString["FibonacciNumber"]);
+    int prev = 0;
+    int next = 1;
+    int sum = 0;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/FizzBuzz.css" rel="stylesheet" />
+    <title>Fibonacci</title>
+</head>
+<body>
+    <div>
+        <h2>Exercise 2 - Fibonacci</h2>
+        <ul>
+            @for (int i = 0; i < fibonacciNumber; )
+            {
+                sum = prev + next;
+                prev = next;
+                next = sum;
+                <li>@sum</li>
+                i = i + prev;
+
+            }
+
+        </ul>
+    </div>
+</body>
+</html>
+
+
