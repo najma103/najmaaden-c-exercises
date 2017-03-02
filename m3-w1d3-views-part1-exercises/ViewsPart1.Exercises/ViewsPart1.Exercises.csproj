@@ -89,7 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fibonacci.css" />
+    <Content Include="Echo.css" />
     <Content Include="FizzBuzz.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -107,6 +107,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\Home\FizzBuzz.cshtml" />
     <Content Include="Views\Home\Fibonacci.cshtml" />
+    <Content Include="Views\Home\Echo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
