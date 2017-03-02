@@ -25,7 +25,8 @@
         <ul>
             @for (int i = count; i <= count; i--)
             {
-                <li> <style>{font-size:@i px}</style>@word</li>
+                //<li> <style>{font-size:@i px}</style>@word</li>
+                <li style="font-size:@i%";>@word</li>
                 if (i == 0)
                 {
                     return;
