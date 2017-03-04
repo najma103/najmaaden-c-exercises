@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+@using Exercises.Models;
+
+@model List <Product>
+
+<h2>Toy Department</h2>
+
+<section>
+
+    @foreach (var item in Model)
+    {
+        <div class="mainDiv">
+            <div >
+                <img id="images" src="~/Content/images/@item.ImageName"/>
+                
+            </div>
+            <div id="divContent">
+                <p>
+                @item.Name
+                <span>@item.Manufacturer</span>
+                </p>
+            </div>
+          
+           
+        </div>
+        <hr />
+        <br />
+
+    }
+</section>
+

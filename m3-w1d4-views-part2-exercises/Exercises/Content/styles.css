@@ -60,3 +60,25 @@ section {
 }
 
 /* Individual Page Styles */
+.mainDiv {
+    width:100%;
+    display: inline-block;
+   
+}
+#images {
+    width: 150px;
+    height: 100px;
+    padding:5px;
+    float:left;
+
+  
+}
+
+#divContent {
+    width: 350px;
+    height: 100px;
+    padding:5px;
+    float:left;
+
+   
+}
