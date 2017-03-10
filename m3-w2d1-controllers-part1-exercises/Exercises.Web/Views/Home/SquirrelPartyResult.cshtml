@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "SquirrelPartyResult";
+}
+
+<div class="body-content">
+    <h2>Squirrel Party Result</h2>
+        @if (ViewBag.Party)
+        {
+            <h3>Great Parttty!!!</h3>
+            <img src="~/Content/Images/happy-squirrel.png" alt="happy-squirrel" />
+        }
+        else
+        {
+            <h3>Ugh!!!</h3>
+            <img src="~/Content/Images/sad-squirrel.png" alt="sad-squirrel.png" />
+        }
+</div>
+
