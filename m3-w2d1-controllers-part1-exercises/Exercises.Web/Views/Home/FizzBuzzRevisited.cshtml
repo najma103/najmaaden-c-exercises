@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "FizzBuzzRevisited";
+}
+
+
+<section class="body-content">
+    <div>
+        <h2>Alternative FizzBuzz</h2>
+        <hr />
+
+        <h4>FizzBuzz Revisted</h4><br />
+
+        @using (Html.BeginForm("FizzBuzzRevisitedResult", "Home", FormMethod.Get))
+        {
+            @Html.Label("Divisable By:")<br />
+            @Html.TextBox("FirstDivisable")<br />
+
+            @Html.Label("Divisable By:")<br />
+            @Html.TextBox("SecondDivisable")<br />
+
+            @Html.Label("Alternative Fizz:")<br />
+            @Html.TextBox("Fizz")<br />
+
+            @Html.Label("Alternative Buzz:")<br />
+            @Html.TextBox("Buzz")<br /> <br />
+
+            @Html.Label("Number 1: ")
+            @Html.TextBox("num1")<br />
+
+            @Html.Label("Number 2: ")
+            @Html.TextBox("num2")<br />
+
+            @Html.Label("Number 3: ")
+            @Html.TextBox("num3")<br />
+
+            @Html.Label("Number 4: ")
+            @Html.TextBox("num4")<br />
+
+            @Html.Label("Number 5: ")
+            @Html.TextBox("num5")<br /><br />
+
+            <input type="submit" value="Submit" class="btn btn btn-default" />
+        }
+    </div>
+</section>
+

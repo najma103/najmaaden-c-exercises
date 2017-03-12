@@ -3,23 +3,25 @@
     ViewBag.Title = "Squirrel";
 }
 
-<div class="body-content">
-    <h2>Squirrel Cigar Party</h2>
+<section>
+    <div class="body-content">
+        <h2>Squirrel Cigar Party</h2>
 
-    <img src="~/Content/Images/smoking-squirrel.png" alt="Smoking Squirrel" />
+        <img src="~/Content/Images/smoking-squirrel.png" alt="Smoking Squirrel" />
 
-    @using (Html.BeginForm("SquirrelPartyResult", "Home", FormMethod.Get))
-    { 
-        @Html.Label("Number of Squirrels: ")<br />
-        @Html.TextBox("numberOfSquirrels") <br /> <br />
+        @using (Html.BeginForm("SquirrelPartyResult", "Home", FormMethod.Get))
+        {
+            @Html.Label("Number of Squirrels: ")<br />
+            @Html.TextBox("numberOfSquirrels") <br /> <br />
 
-        <input id="Weekend" name="isWeekend" type="checkbox" value="false" />
-        @*@Html.CheckBox("isWeekend", true)*@
-        <span> Is this the weekend? </span> <br /> <br />
+            @*<input id="Weekend" name="isWeekend" type="checkbox" value="false" />*@
+            @Html.CheckBox("isWeekend", true)
+            <span> Is this the weekend? </span> <br /> <br />
 
-        <input type="submit" value="Submit" />
-    }
+            <input type="submit" value="Submit" class="btn btn btn-default"/>
+        }
 
-</div>
+    </div>
+</section>
 
 

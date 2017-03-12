@@ -3,11 +3,29 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>@ViewBag.Title - Controller Part 1 Exercise </title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
     <link rel="stylesheet" href="~/Content/style.css" />
 </head>
 <body>
-    <div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("Exercise Module 3 Week 2", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("xOrdered Name", "xOrderedName", "Home")</li>
+                    <li>@Html.ActionLink("Colorized Name", "ColorizedName", "Home")</li>
+                    <li>@Html.ActionLink("FizzBuzz Revisted", "FizzBuzzRevisited", "Home")</li>
+                    <li>@Html.ActionLink("Squirrel Cigar Party", "Squirrel", "Home")</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
         @RenderBody()
     </div>
 </body>

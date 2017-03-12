@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "ColorizedName";
+}
+
+<section class="body-content">
+    <div style="background-color:lightblue; margin-left:40px; margin-top:10px;margin-bottom:50px">
+        <br />
+        @using (Html.BeginForm("ColorizedResult", "Home", FormMethod.Get))
+        {
+            <h2>Colorized  Name</h2>
+            <hr /> <br />
+            <h4>Enter Name </h4> <br />
+            @Html.Label("First Name: ") <br />
+            @Html.TextBox("fName")<br />
+
+            @Html.Label("Last Name")<br />
+            @Html.TextBox("lName")<br /><br />
+
+            <h4>Choose Color</h4> 
+            @Html.CheckBox("Red", false)
+            @Html.Label("Red") <br />
+
+            @Html.CheckBox("Blue", false)
+            @Html.Label("Blue")<br />
+
+            @Html.CheckBox("Green", false)
+            @Html.Label("Green")<br />
+
+            <input type="submit" value="Submit" class="btn btn btn-default"/>
+        }
+    </div>
+</section>
+

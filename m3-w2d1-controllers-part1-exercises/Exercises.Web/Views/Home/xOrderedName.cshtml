@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "xOrderedName";
+}
+
+<section class="body-content">
+    <div style="background-color:lightblue; margin-left:40px; margin-top:10px;margin-bottom:50px">
+        <br />
+        @using (Html.BeginForm("xOrderedNameResult", "Home", FormMethod.Get))
+        {
+            <h2> xOrdered Name</h2>
+            <hr /> <br />
+            <h4>Enter Name </h4> <br />
+            @Html.Label("First Name: ") <br />
+            @Html.TextBox("fName")<br />
+            @Html.Label("Middle Initial: ")<br />
+            @Html.TextBox("mInitial") <br />
+            @Html.Label("Last Name")<br />
+            @Html.TextBox("lName")<br />
+
+            <h4>Choose Order</h4>
+
+            @Html.RadioButton("order", "firstMidleLast")
+            @Html.Label("First MI Last") <br />
+
+            @Html.RadioButton("order", "firstLast")
+            @Html.Label("First Last") <br />
+
+            @Html.RadioButton("order", "lastFirstMiddle")
+            @Html.Label("Last, First MI") <br />
+
+            @Html.RadioButton("order", "lastFirst")
+            @Html.Label("Last, First") <br />
+
+            <input type="submit" value="Submit" class="btn btn btn-default"/>
+        }
+    </div>
+</section>
+

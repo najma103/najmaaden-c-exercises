@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "ColorizedResult";
+}
+
+
+<section>
+    <div class="body-content">
+        <h2>Colorized Name Result</h2> <br />
+        <hr />
+        <br />
+        <h4>Colorized Name </h4>
+        <p>First Name: <strong>@ViewBag.FirstName </strong></p>
+        <p>Last Name: <strong> @ViewBag.LastName </strong></p>
+
+        @if (ViewBag.Red == "Red")
+        {
+            <p style="color:red"> @ViewBag.FirstName  @ViewBag.LastName</p>
+        }
+
+        @if (ViewBag.Blue == "Blue")
+        {
+            <p style="color:blue"> @ViewBag.FirstName  @ViewBag.LastName</p>
+        }
+
+        @if (ViewBag.Green == "Green")
+        {
+            <p style="color:green"> @ViewBag.FirstName  @ViewBag.LastName</p>
+        }
+    </div>
+</section>
+
+

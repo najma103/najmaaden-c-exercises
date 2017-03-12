@@ -89,6 +89,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -109,6 +111,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Squirrel.cshtml" />
     <Content Include="Views\Home\SquirrelPartyResult.cshtml" />
+    <Content Include="Views\Home\xOrderedName.cshtml" />
+    <Content Include="Views\Home\xOrderedNameResult.cshtml" />
+    <Content Include="Views\Home\ColorizedName.cshtml" />
+    <Content Include="Views\Home\ColorizedResult.cshtml" />
+    <Content Include="Views\Home\FizzBuzzRevisited.cshtml" />
+    <Content Include="Views\Home\FizzBuzzRevisitedResult.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
