@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "LastTwoResult";
+}
+
+
+@model string[]
+
+<section>
+    <div class="body-content">
+        <h2>Last Two Result</h2>
+        <hr /><br />
+        <h4> FizzBuzz Revisited</h4>
+
+        @for (int i = 0; i < 10; i++)
+        {
+            <p>@Model[i]</p>
+        }
+
+    </div>
+</section>
+

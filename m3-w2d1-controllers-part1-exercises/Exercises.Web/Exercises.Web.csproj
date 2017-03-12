@@ -117,6 +117,8 @@
     <Content Include="Views\Home\ColorizedResult.cshtml" />
     <Content Include="Views\Home\FizzBuzzRevisited.cshtml" />
     <Content Include="Views\Home\FizzBuzzRevisitedResult.cshtml" />
+    <Content Include="Views\Home\LastTWo.cshtml" />
+    <Content Include="Views\Home\LastTwoResult.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -150,10 +150,142 @@ namespace Exercises.Web.Controllers
                 }
             }
 
-
-
             return View("FizzBuzzRevisitedResult", fizzbuzzList);
         }
+
+        //GET: /Home/LastTwo
+        public ActionResult LastTWo()
+        {
+            return View("LastTwo");
+        }
+
+        public ActionResult LastTwoResult()
+        {
+            string[] WordList = new string[10];
+            if (Request.Params["w1"].Length > 1)
+            {
+                string word = Request.Params["w1"];
+                string last = word.Substring(word.Length - 1);
+                string secondFromLast = word.Substring(word.Length - 2, 1);
+                WordList[0] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+            }
+            else
+            {
+                WordList[0] = Request.Params["w1"];
+            }
+            //word 2
+            if (Request.Params["w2"].Length > 1)
+            {
+                string word = Request.Params["w2"];
+                string last = word.Substring(word.Length - 1);
+                string secondFromLast = word.Substring(word.Length - 2, 1);
+                WordList[1] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+            }
+            else
+            {
+                WordList[1] = Request.Params["w2"];
+            }
+            //word 3
+            if (Request.Params["w3"].Length > 1)
+            {
+                string word = Request.Params["w3"];
+                string last = word.Substring(word.Length - 1);
+                string secondFromLast = word.Substring(word.Length - 2, 1);
+                WordList[2] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+            }
+            else
+            {
+                WordList[2] = Request.Params["w3"];
+            }
+            //word 4
+            if (Request.Params["w4"].Length > 1)
+            {
+                string word = Request.Params["w4"];
+                string last = word.Substring(word.Length - 1);
+                string secondFromLast = word.Substring(word.Length - 2, 1);
+                WordList[3] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+            }
+            else
+            {
+                WordList[3] = Request.Params["w4"];
+            }
+            //word 5
+            if (Request.Params["w5"].Length > 1)
+            {
+                string word = Request.Params["w5"];
+                string last = word.Substring(word.Length - 1);
+                string secondFromLast = word.Substring(word.Length - 2, 1);
+                WordList[4] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+            }
+            else
+            {
+                WordList[4] = Request.Params["w5"];
+            }
+
+            // word 6
+            if (Request.Params["w6"].Length > 1)
+            {
+                string word = Request.Params["w6"];
+                string last = word.Substring(word.Length - 1);
+                string secondFromLast = word.Substring(word.Length - 2, 1);
+                WordList[5] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+            }
+            else
+            {
+                WordList[5] = Request.Params["w6"];
+            }
+            // word 7
+            if (Request.Params["w7"].Length > 1)
+            {
+                string word = Request.Params["w7"];
+                string last = word.Substring(word.Length - 1);
+                string secondFromLast = word.Substring(word.Length - 2, 1);
+                WordList[6] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+            }
+            else
+            {
+                WordList[6] = Request.Params["w7"];
+            }
+            //word 8
+            if (Request.Params["w8"].Length > 1)
+            {
+                string word = Request.Params["w8"];
+                string last = word.Substring(word.Length - 1);
+                string secondFromLast = word.Substring(word.Length - 2, 1);
+                WordList[7] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+            }
+            else
+            {
+                WordList[7] = Request.Params["w8"];
+            }
+            //word 9
+            if (Request.Params["w9"].Length > 1)
+            {
+                string word = Request.Params["w9"];
+                string last = word.Substring(word.Length - 1);
+                string secondFromLast = word.Substring(word.Length - 2, 1);
+                WordList[8] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+            }
+            else
+            {
+                WordList[8] = Request.Params["w9"];
+            }
+            // Word 10
+            if (Request.Params["w10"].Length > 1)
+            {
+                string word = Request.Params["w10"];
+                string last = word.Substring(word.Length - 1);
+                string secondFromLast = word.Substring(word.Length - 2, 1);
+                WordList[9] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+            }
+            else
+            {
+                WordList[9] = Request.Params["w10"];
+            }
+            return View("LastTwoResult", WordList);
+        }
+
+        //GET: /Home/Squirrel
         public ActionResult Squirrel()
         {
             return View();

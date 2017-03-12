@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "LastTWo";
+}
+
+<section class="body-content">
+    <div>
+        <h2>Last TWo</h2>
+        <hr /> <br />
+        <h3>Reverse Last Two Characters</h3>
+        @using (Html.BeginForm("LastTwoResult", "Home", FormMethod.Get))
+        {
+            @Html.Label("Word 1: ")
+            @Html.TextBox("w1") <br />
+
+            @Html.Label("Word 2: ")
+            @Html.TextBox("w2") <br />
+
+            @Html.Label("Word 3: ")
+            @Html.TextBox("w3") <br />
+
+            @Html.Label("Word 4: ")
+            @Html.TextBox("w4") <br />
+
+            @Html.Label("Word 5: ")
+            @Html.TextBox("w5") <br />
+
+            @Html.Label("Word 6: ")
+            @Html.TextBox("w6") <br />
+
+            @Html.Label("Word 7: ")
+            @Html.TextBox("w7") <br />
+
+            @Html.Label("Word 8: ")
+            @Html.TextBox("w8") <br />
+
+            @Html.Label("Word 9: ")
+            @Html.TextBox("w9") <br />
+
+            @Html.Label("Word 10: ")
+            @Html.TextBox("w10") <br /> <br />
+
+            <input type="submit" value="Submit" class="btn btn btn-default" />
+        }
+
+    </div>
+</section>
+
