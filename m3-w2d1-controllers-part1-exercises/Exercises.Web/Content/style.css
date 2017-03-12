@@ -17,5 +17,9 @@ img {
 }
 section {
     background-color:lightblue;
-    min-height: 750px;
+    min-height: 700px;
+}
+
+p {
+    margin-bottom: 0;
 }

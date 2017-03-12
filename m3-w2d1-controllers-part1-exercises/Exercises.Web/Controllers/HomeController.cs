@@ -99,7 +99,60 @@ namespace Exercises.Web.Controllers
 
         public ActionResult FizzBuzzRevisitedResult()
         {
-            return View("FizzBuzzRevisitedResult");
+            string[] fizzbuzzList = new string[5];
+            string altFizz = Request.Params["Fizz"];
+            string altBuzz = Request.Params["Buzz"];
+            int divisibleOne = 0;
+            int divisibleTwo = 0;
+
+            int[] numbers = new int[5];
+            numbers[0] = Convert.ToInt32(Request.Params["num1"]);
+            numbers[1] = Convert.ToInt32(Request.Params["num2"]);
+            numbers[2] = Convert.ToInt32(Request.Params["num3"]);
+            numbers[3] = Convert.ToInt32(Request.Params["num4"]);
+            numbers[4] = Convert.ToInt32(Request.Params["num5"]);
+
+            ViewBag.DivOne = Request.Params["firstDivisable"];
+            ViewBag.DivTwo = Request.Params["secondDivisable"];
+            ViewBag.AltFizz = altFizz;
+            ViewBag.AltBuzz = altBuzz;
+
+            if (Request.Params["FirstDivisable"] != "")
+            {
+                divisibleOne = Convert.ToInt32(Request.Params["firstDivisable"]);
+            }
+
+            if (Request.Params["SecondDivisable"] != "")
+            {
+                divisibleTwo = Convert.ToInt32(Request.Params["SecondDivisable"]);
+            }
+
+            if (divisibleOne != 0 && divisibleTwo != 0)
+            {
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    if (numbers[i] % divisibleOne == 0 && numbers[i] % divisibleTwo == 0)
+                    {
+                        fizzbuzzList[i] = numbers[i].ToString() + "  " + altFizz + altBuzz;
+                    }
+                    else if (numbers[i] % divisibleOne == 0)
+                    {
+                        fizzbuzzList[i] = numbers[i].ToString() + "  " + altFizz;
+                    }
+                    else if (numbers[i] % divisibleTwo == 0)
+                    {
+                        fizzbuzzList[i] = numbers[i].ToString() + "  " + altBuzz;
+                    }
+                    else
+                    {
+                        fizzbuzzList[i] = numbers[i].ToString();
+                    }
+                }
+            }
+
+
+
+            return View("FizzBuzzRevisitedResult", fizzbuzzList);
         }
         public ActionResult Squirrel()
         {

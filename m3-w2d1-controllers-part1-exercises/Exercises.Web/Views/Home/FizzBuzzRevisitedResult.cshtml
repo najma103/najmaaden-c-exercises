@@ -3,5 +3,25 @@
     ViewBag.Title = "FizzBuzzRevisitedResult";
 }
 
-<h2>FizzBuzz Revisited Result</h2>
+@model string[]
+
+<section>
+    <div class="body-content">
+        <h2>FizzBuzz Revisited Result</h2>
+        <hr /><br />
+        <h4> FizzBuzz Revisited</h4>
+        <p>Divisable By: @ViewBag.DivOne</p>
+        <p>Divisable By: @ViewBag.DivTwo</p>
+        <p>Divisable By Both: @ViewBag.DivOne and @ViewBag.DivTwo</p>
+        <br />
+        <p>Alternative Fizz: @ViewBag.AltFizz</p>
+        <p>Alternative Buzz: @ViewBag.AltBuzz</p><br />
+
+        @for (int i = 0; i < 5; i++)
+        {
+            <p>@Model[i]</p>
+        }
+
+    </div>
+</section>
 
