@@ -15,7 +15,27 @@ namespace FormsWithHttpPost.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
-        }        
+            IReviewDAL thisDAL = new ReviewSqlDAL();
+            List<Review> listReviews = thisDAL.GetAllReviews();
+            return View("Index", listReviews);
+        } 
+        
+        // GET: Home/NewReview
+        public ActionResult NewReview(string username, int rating, string title, string msg )
+        {
+            if (username != "" && rating != 0)
+            {
+                Review newReview = (Review)Session["NewReview"];
+                IReviewDAL thisDAL = new ReviewSqlDAL();
+                bool rowInserted = thisDAL.SaveReview(newReview);
+                if (rowInserted)
+                {
+                    return View("Index");
+                }
+            }
+
+            return View("NewReview");
+        }      
+
     }
 }
