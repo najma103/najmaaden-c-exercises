@@ -179,7 +179,7 @@ namespace Exercises.Web.Controllers
                 string word = Request.Params["w2"];
                 string last = word.Substring(word.Length - 1);
                 string secondFromLast = word.Substring(word.Length - 2, 1);
-                WordList[1] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+                WordList[1] = word + ":  " + word.Substring(0, word.Length - 2) + last + secondFromLast;
             }
             else
             {
@@ -191,7 +191,7 @@ namespace Exercises.Web.Controllers
                 string word = Request.Params["w3"];
                 string last = word.Substring(word.Length - 1);
                 string secondFromLast = word.Substring(word.Length - 2, 1);
-                WordList[2] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+                WordList[2] = word + ":  " + word.Substring(0, word.Length - 2) + last + secondFromLast;
             }
             else
             {
@@ -203,7 +203,7 @@ namespace Exercises.Web.Controllers
                 string word = Request.Params["w4"];
                 string last = word.Substring(word.Length - 1);
                 string secondFromLast = word.Substring(word.Length - 2, 1);
-                WordList[3] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+                WordList[3] = word + ":  " + word.Substring(0, word.Length - 2) + last + secondFromLast;
             }
             else
             {
@@ -215,7 +215,7 @@ namespace Exercises.Web.Controllers
                 string word = Request.Params["w5"];
                 string last = word.Substring(word.Length - 1);
                 string secondFromLast = word.Substring(word.Length - 2, 1);
-                WordList[4] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+                WordList[4] = word + ":  " + word.Substring(0, word.Length - 2) + last + secondFromLast;
             }
             else
             {
@@ -228,7 +228,7 @@ namespace Exercises.Web.Controllers
                 string word = Request.Params["w6"];
                 string last = word.Substring(word.Length - 1);
                 string secondFromLast = word.Substring(word.Length - 2, 1);
-                WordList[5] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+                WordList[5] = word + ":  " + word.Substring(0, word.Length - 2) + last + secondFromLast;
             }
             else
             {
@@ -240,7 +240,7 @@ namespace Exercises.Web.Controllers
                 string word = Request.Params["w7"];
                 string last = word.Substring(word.Length - 1);
                 string secondFromLast = word.Substring(word.Length - 2, 1);
-                WordList[6] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+                WordList[6] = word + ":  " + word.Substring(0, word.Length - 2) + last + secondFromLast;
             }
             else
             {
@@ -252,7 +252,7 @@ namespace Exercises.Web.Controllers
                 string word = Request.Params["w8"];
                 string last = word.Substring(word.Length - 1);
                 string secondFromLast = word.Substring(word.Length - 2, 1);
-                WordList[7] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+                WordList[7] = word + ":  " + word.Substring(0, word.Length - 2) + last + secondFromLast;
             }
             else
             {
@@ -264,7 +264,7 @@ namespace Exercises.Web.Controllers
                 string word = Request.Params["w9"];
                 string last = word.Substring(word.Length - 1);
                 string secondFromLast = word.Substring(word.Length - 2, 1);
-                WordList[8] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+                WordList[8] = word + ":  " + word.Substring(0, word.Length - 2) + last + secondFromLast;
             }
             else
             {
@@ -276,7 +276,7 @@ namespace Exercises.Web.Controllers
                 string word = Request.Params["w10"];
                 string last = word.Substring(word.Length - 1);
                 string secondFromLast = word.Substring(word.Length - 2, 1);
-                WordList[9] = word.Substring(0, word.Length - 2) + last + secondFromLast;
+                WordList[9] = word + ":  " + word.Substring(0, word.Length - 2) + last + secondFromLast;
             }
             else
             {
