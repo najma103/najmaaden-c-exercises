@@ -10,8 +10,6 @@ namespace FormsWithHttpPost.Controllers
 {
     public class HomeController : Controller
     {
-        
-
         // GET: Home
         public ActionResult Index()
         {
@@ -21,21 +19,22 @@ namespace FormsWithHttpPost.Controllers
         } 
         
         // GET: Home/NewReview
-        public ActionResult NewReview(string username, int rating, string title, string msg )
+        public ActionResult NewReview(Review model )
         {
-            if (username != "" && rating != 0)
+            if (model.Username != "" && model.Rating != 0 && model.Title != "")
             {
-                Review newReview = (Review)Session["NewReview"];
+                Review newReview = model;
                 IReviewDAL thisDAL = new ReviewSqlDAL();
                 bool rowInserted = thisDAL.SaveReview(newReview);
                 if (rowInserted)
                 {
-                    return View("Index");
+                    List<Review> listReviews = thisDAL.GetAllReviews();
+                    return View("Index", listReviews);
                 }
             }
 
             return View("NewReview");
-        }      
+        }  
 
     }
 }
