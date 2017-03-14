@@ -72,15 +72,15 @@ form div {
 
 form div label {
     font-size: 1.1em;
-    width: 300px;
+    width: 100px;
     display: inline-block;
 }
 
 div input[type=text], input[type=password], select {
     height: 25px;
     font-size: 1.1em;
-    width: 300px;   
-    float: right;
+    width: 150px;   
+    float: left;
 }
 
 input[type=radio] {
@@ -91,7 +91,7 @@ form div button {
     padding: 5px;
     background-color: white;
     font-size: 1.1em;
-    float: right;
+    float: left;
 }
 
 

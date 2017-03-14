@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Page1";
+}
+@using TechElevator.Web.Models;
+@model Favorites
+
+<section>
+    <div style="width:700px; height: 450px; margin:50px">
+        <h1>Favorite Things Exercise</h1>
+        @using (Html.BeginForm("Page2", "Home", FormMethod.Post))
+        {
+            <h3>What is your favorite color?</h3><br />
+            @Html.TextBoxFor(m => Model.FavoriteColor) <br /><br />
+
+            <input type="submit" value="NEXT>>>" />
+        }
+    </div>
+</section>
+

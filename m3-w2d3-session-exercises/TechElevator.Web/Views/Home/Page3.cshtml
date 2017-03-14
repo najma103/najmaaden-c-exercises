@@ -1,0 +1,25 @@
+﻿@using TechElevator.Web.Models;
+@model Favorites
+
+@{
+    ViewBag.Title = "Page3";
+}
+
+<section>
+    
+    <div style="width:700px; height: 450px; text-align:center; margin:50px">
+        <h1>Favorite Things Exercise</h1>
+        @using (Html.BeginForm("Summary", "Home", FormMethod.Post))
+        {
+            <h2>What is your favorite season?</h2>
+            @Html.RadioButtonFor(m => m.FavoriteSeason,"Spring", false) <spam>Spring</spam> 
+            @Html.RadioButtonFor(m => m.FavoriteSeason, "Summer", false) <span>Summer</span>
+            @Html.RadioButtonFor(m => m.FavoriteSeason, "Fall", false) <span>Fall</span>
+            @Html.RadioButtonFor(m => m.FavoriteSeason, "Winter", false) <span>Winter</span>
+            <br /> <br />
+
+            <input type="submit" value="NEXT>>>" />
+        }
+    </div>
+</section>
+
