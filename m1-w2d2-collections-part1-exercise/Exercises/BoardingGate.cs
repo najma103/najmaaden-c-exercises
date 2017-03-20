@@ -37,7 +37,8 @@ namespace Exercises
                     else if (element >= 11 && element <= 20)
                     {
                         seats11To20.Enqueue(element);
-                    } else
+                    }
+                    else
                     {
                         seats21To30.Enqueue(element);
                     }

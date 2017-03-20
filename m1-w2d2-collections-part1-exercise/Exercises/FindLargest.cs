@@ -16,16 +16,15 @@ namespace Exercises
          */
         public int FindLargest(List<int> integerList)
         {
-            int largest = 0;
-                foreach (int element in integerList)
-                {
-                    if (largest < element)
-                    {
-                        largest = element;
-                    }
-                }
-                return largest;
-   
+            int maxNum = 0;
+            foreach (int element in integerList)
+            {
+                if (maxNum < element)
+                 {
+                    maxNum = element;
+                 }
+            }
+            return maxNum;
         }
 
     }

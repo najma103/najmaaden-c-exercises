@@ -29,19 +29,17 @@ namespace Exercises
                 {
                     fizzList.Add("FizzBuzz");
                 }
+                else if (element % 3 == 0)
+                {
+                    fizzList.Add("Fizz");
+                }
+                else if (element % 5 == 0)
+                {
+                    fizzList.Add("Buzz");
+                }
                 else
                 {
-                    if (element % 3 == 0)
-                    {
-                        fizzList.Add("Fizz");
-                    }
-                    else if (element % 5 == 0)
-                    {
-                        fizzList.Add("Buzz");
-                    } else
-                    {
-                        fizzList.Add(element.ToString());
-                    }
+                    fizzList.Add(element.ToString());
                 }
 
             }
