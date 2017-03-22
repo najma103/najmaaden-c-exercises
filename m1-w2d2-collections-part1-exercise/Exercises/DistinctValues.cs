@@ -16,12 +16,10 @@ namespace Exercises
          */
         public List<string> DistinctValues(List<string> stringList)
         {
-            HashSet<string> colorHash = new HashSet<string>();
+            HashSet<string> colorHash = new HashSet<string>(stringList);
 
-            foreach (string item in stringList)
-            {
-                colorHash.Add(item);
-            }
+            //removed the forloop and used the HashSet's contstructor to eliminate the duplicates
+
             List<string> colorList = colorHash.ToList();
 
             return colorList;
